@@ -1,65 +1,76 @@
-body {
+@import url("https://fonts.googleapis.com/css?family=Poppins:600&display=swap");
+
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: hsl(0, 0%, 95%);
+  background-color: #e0e3eb;
 }
 
-#calculator {
-  font-family: Arial, Helvetica, sans-serif;
-  background-color: hsl(0, 0%, 15%);
+.calculator {
+  position: relative;
+  /* max-width: 300px;
+  width: 100%; */
+  background-color: #fff;
   border-radius: 15px;
-  max-width: 500px;
-  overflow: hidden;
+  padding: 10px 20px 20px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
 }
 
-#display {
+.display {
+  height: 80px;
   width: 100%;
-  padding: 20px;
-  font-size: 5rem;
-  text-align: left;
-  border: none;
-  background-color: hsl(0, 0%, 25%);
-  color: #fff;
+  outline: none;
+  border: inset;
+  border-radius: 15px;
+  text-align: right;
+  margin-bottom: 10px;
+  font-size: 25px;
+  color: #000e1a;
+  pointer-events: none;
 }
 
-#keys {
+.keys {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 10px;
-  padding: 25px;
+  grid-gap: 10px;
 }
 
-button {
-  width: 100px;
-  height: 100px;
-  border-radius: 50px;
+.keys button {
+  border-radius: 12px 10px;
+  padding: 10px;
   border: none;
-  background-color: hsl(0, 0%, 30%);
-  color: #fff;
-  font-size: 3rem;
-  font-weight: bold;
+  background-color: #eee;
+  font-size: 20px;
   cursor: pointer;
+  transition: background-color 150ms ease-in;
 }
 
-button:hover {
-  background-color: hsl(0, 0%, 40%);
+.keys button:hover {
+  background-color: #dbdddd;
 }
 
-button:active {
-  background-color: hsl(0, 0%, 50%);
+.keys button:active {
+  background-color: #949b9b;
+  transform: scale(0.99);
 }
 
-.operator-btn {
-  background-color: hsl(35, 100%, 55%);
+.operator {
+  color: #008587;
 }
 
-.operator-btn:hover {
-  background-color: hsl(35, 100%, 65%);
+.operator:hover {
+  color: #006061;
 }
 
-.operator-btn:active {
-  background-color: hsl(35, 100%, 75%);
+.operator:active {
+  color: #003536;
 }
